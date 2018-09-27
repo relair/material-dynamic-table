@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng build --prod material-dynamic-table"
+    "copy": "cp README.md dist/material-dynamic-table",
+    "build-lib": "ng build --prod material-dynamic-table && npm run copy"
   },
   "private": true,
   "dependencies": {

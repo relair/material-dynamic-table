@@ -1,7 +1,7 @@
 # material-dynamic-table
 
-Dynamic table component for angular built on top of angular material table. It offers sorting, pagination and filtering per column and the ability to specify content types and components used for displaying them.
-The initial purpuse of this library was to display data coming from OData API, although it can work with MatTableDataSource (however it needs to be extended to enable filtering - see example).
+Dynamic table component for angular built on top of angular material table. It offers sorting, pagination, filtering per column and the ability to specify content types and components used for displaying them.
+The initial purpose of this library was to display data coming from OData API, although it can work with MatTableDataSource (however it needs to be extended to enable filtering - see example).
 
 ## Demo
 
@@ -75,7 +75,7 @@ export class AppComponent {
     },
     {
       name: 'recievedOn',
-      displayName: 'Recieved On',
+      displayName: 'Received On',
       type: 'date'
     },
     {
