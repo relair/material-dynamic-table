@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+}
+
+th .mat-icon[ng-reflect-color='default'] {
+    opacity: 0.54;
+}
+
+th .mat-icon[ng-reflect-color='default']:hover {
+    opacity: 1;
+}

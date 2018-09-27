@@ -1,0 +1,7 @@
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item  (click)="showDetails()">View Details</button>
+</mat-menu>
+
+<button mat-icon-button color="primary" [matMenuTriggerFor]="appMenu">
+   <mat-icon>more_vert</mat-icon>
+ </button>

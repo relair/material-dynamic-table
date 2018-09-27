@@ -1,0 +1,11 @@
+{
+  "name": "material-dynamic-table",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Marcin Suty",
+  "peerDependencies": {
+    "@angular/common": "^6.1.6",
+    "@angular/core": "^6.1.6",
+    "@angular/material": "^6.4.7"
+  }
+}

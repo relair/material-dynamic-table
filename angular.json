@@ -121,6 +121,45 @@
           }
         }
       }
+    },
+    "material-dynamic-table": {
+      "root": "projects/material-dynamic-table",
+      "sourceRoot": "projects/material-dynamic-table/src",
+      "projectType": "library",
+      "prefix": "dt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/material-dynamic-table/tsconfig.lib.json",
+            "project": "projects/material-dynamic-table/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/material-dynamic-table/src/test.ts",
+            "tsConfig": "projects/material-dynamic-table/tsconfig.spec.json",
+            "karmaConfig": "projects/material-dynamic-table/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/material-dynamic-table/tsconfig.lib.json",
+              "projects/material-dynamic-table/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "lib-demo"
