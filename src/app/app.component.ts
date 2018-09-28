@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FilteredDataSource } from './dataSource/filtered-data-source';
+import { FilteredDataSource } from './data-source/filtered-data-source';
 import { ColumnConfig } from 'material-dynamic-table';
 import { Product } from './product';
 
