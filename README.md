@@ -6,6 +6,7 @@ The initial purpose of this library was to display data coming from OData API, a
 ## Demo
 
 Online demo: https://stackblitz.com/edit/dynamic-table
+
 Run `ng serve` for the main project to launch demo for this library.
 
 ## Getting started
