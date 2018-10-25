@@ -139,7 +139,7 @@ export class AppComponent {
 
 ##### Properties
 | Name         | Description                                                                                         |
-|------------------|-------------------------------------------------------------------------------------------------|
+|--------------|-----------------------------------------------------------------------------------------------------|
 | @Input() columns: ColumnConfig[]     | Column definition for dynamic table, order will determine column order      |
 | @Input() dataSource: DataSource<any> | Data source that provides data for dynamic table                            |
 | @Input() pageSize: number            | Initial page size for pagination - default 20                               |
@@ -148,7 +148,7 @@ export class AppComponent {
 #### ColumnConfig definition
 ColumnConfig is used to provide specification for the columns to be displayed
 
-| Property         | Description                                                                                      |
+| Property         | Description                                                                                |
 |------------------|--------------------------------------------------------------------------------------------|
 | name             | Name of the property to display - it should match propery name from data source            |
 | displayName      | Name to be displayed in column header                                                      |

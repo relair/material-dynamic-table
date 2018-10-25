@@ -1,4 +1,4 @@
-import { TableFilter } from '../../dataSource/table-filter';
+import { TableFilter } from '../../data-source/table-filter';
 
 export class TextFilter implements TableFilter {
     value: string;
