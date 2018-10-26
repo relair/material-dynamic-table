@@ -15,6 +15,7 @@ export class DynamicTableComponent implements OnInit {
   @Input() columns: ColumnConfig[];
   @Input() dataSource: DataSource<any>;
   @Input() pageSize = 20;
+  @Input() pageSizeOptions = [20, 50, 100];
   @Input() showFilters = true;
   @Input() stickyHeader = false;
 

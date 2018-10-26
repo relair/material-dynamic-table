@@ -143,7 +143,9 @@ export class AppComponent {
 | @Input() columns: ColumnConfig[]     | Column definition for dynamic table, order will determine column order      |
 | @Input() dataSource: DataSource<any> | Data source that provides data for dynamic table                            |
 | @Input() pageSize: number            | Initial page size for pagination - default 20                               |
+| @Input() pageSizeOptions :  number[] | The set of provided page size options to display to the user.               |
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
+| @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 
 #### ColumnConfig definition
 ColumnConfig is used to provide specification for the columns to be displayed
