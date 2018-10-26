@@ -77,6 +77,18 @@ export class AppComponent {
       description: 'A dairy product',
       recievedOn: new Date('2017-11-06T21:22:53.542Z'),
       created: new Date('2014-02-11T11:34:12.442Z')
+    },
+    {
+      product: 'Floppy disk',
+      description: 'It belongs in a museum',
+      recievedOn: new Date('2015-10-12T11:12:42.621Z'),
+      created: new Date('2013-03-12T21:54:31.221Z')
+    },
+    {
+      product: 'Fan',
+      description: 'It will blow you away',
+      recievedOn: new Date('2014-05-04T01:22:35.412Z'),
+      created: new Date('2014-03-18T23:14:18.426Z')
     }
   ];
 
