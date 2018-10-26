@@ -16,7 +16,8 @@ export class AppComponent {
     {
       name: 'product',
       displayName: 'Product',
-      type: 'string'
+      type: 'string',
+      sticky: 'start'
     },
     {
       name: 'description',
@@ -37,7 +38,8 @@ export class AppComponent {
       }
     },
     {
-      type: 'options'
+      type: 'options',
+      sticky: 'end'
     }
   ];
 

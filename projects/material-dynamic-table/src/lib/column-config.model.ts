@@ -3,4 +3,5 @@
     displayName?: string;
     type: string;
     options?: any;
+    sticky?: string;
 }

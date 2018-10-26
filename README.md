@@ -156,6 +156,7 @@ ColumnConfig is used to provide specification for the columns to be displayed
 | displayName      | Name to be displayed in column header                                                      |
 | type             | Type of the data displayed by this column - it should match one of your defined cell types |
 | options          | Optional field that can be used to pass extra data for cells                               |
+| sticky           | Optional field that can make column sticky to start or end of table. Values: 'start', 'end'|
 
 #### Cell types
 By default there are two types provided:

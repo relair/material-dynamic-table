@@ -1,7 +1,8 @@
 <table mat-table [dataSource]="dataSource"
        matSort matSortDirection="asc">
 
-  <ng-container *ngFor="let column of columns; let i = index" matColumnDef="{{ column.name }}">
+  <ng-container *ngFor="let column of columns; let i = index" matColumnDef="{{ column.name }}"
+                [sticky]="column.sticky === 'start'" [stickyEnd]="column.sticky === 'end'">
     <th mat-header-cell *matHeaderCellDef mat-sort-header="{{ column.name || 'col' + i }}" [disabled]="!column.name">
       {{ column.displayName }}
       <button class="mat-sort-header-button" *ngIf="showFilters && canFilter(column)" (click)="filter(column); $event.stopPropagation();">
