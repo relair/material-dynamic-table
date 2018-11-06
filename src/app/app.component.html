@@ -9,3 +9,7 @@
 <div class="mat-elevation-z2 table-container">
   <mdt-dynamic-table [columns]="columns" [dataSource]="dataSource" [pageSize]="6" [pageSizeOptions]="[2, 4, 6, 8]" [stickyHeader]="true"></mdt-dynamic-table>
 </div>
+
+<div class="buttons" (click)="clearFilters()">
+  <button mat-button>Clear filters</button>
+</div>

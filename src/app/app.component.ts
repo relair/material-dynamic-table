@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { FilteredDataSource } from './data-source/filtered-data-source';
-import { ColumnConfig } from 'material-dynamic-table';
+import { ColumnConfig, DynamicTableComponent } from 'material-dynamic-table';
 import { Product } from './product';
 
 @Component({
@@ -11,6 +11,8 @@ import { Product } from './product';
 })
 export class AppComponent {
   title = 'material-dynamic-table-demo';
+
+  @ViewChild(DynamicTableComponent) dynamicTable: DynamicTableComponent;
 
   columns: ColumnConfig[] = [
     {
@@ -95,4 +97,8 @@ export class AppComponent {
   ];
 
   dataSource = new FilteredDataSource<Product>(this.data);
+
+  clearFilters() {
+    this.dynamicTable.clearFilters();
+  }
 }

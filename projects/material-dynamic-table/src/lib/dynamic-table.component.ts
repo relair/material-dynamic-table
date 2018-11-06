@@ -77,11 +77,20 @@ export class DynamicTableComponent implements OnInit {
         }
         
         if (result || result === '') {
-          const dataSource = this.dataSource as any;
-          dataSource.filters = this.getFilters();
+          this.updateDataSource();
         }
       });
     }
+  }
+
+  clearFilters() {
+    this.appliedFilters = {};
+    this.updateDataSource();
+  }
+
+  protected updateDataSource() {
+    const dataSource = this.dataSource as any;
+    dataSource.filters = this.getFilters();
   }
 
   getFilters() {
