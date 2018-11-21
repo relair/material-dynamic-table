@@ -2,10 +2,10 @@ table {
     width: 100%;
 }
 
-th .mat-icon[ng-reflect-color='default'] {
+th .mat-icon.mat-default {
     opacity: 0.54;
 }
 
-th .mat-icon[ng-reflect-color='default']:hover {
+th .mat-icon.mat-default:hover {
     opacity: 1;
 }
