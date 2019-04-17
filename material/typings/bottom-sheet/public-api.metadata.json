@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./bottom-sheet-module"},{"from":"./bottom-sheet"},{"from":"./bottom-sheet-config"},{"from":"./bottom-sheet-container"},{"from":"./bottom-sheet-animations"},{"from":"./bottom-sheet-ref"}],"importAs":"@angular/material/bottom-sheet"}]

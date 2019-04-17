@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MatTreeNestedDataSource":{"__symbolic":"class","extends":{"__symbolic":"reference","module":"@angular/cdk/collections","name":"DataSource","line":19,"character":48},"arity":1,"members":{"connect":[{"__symbolic":"method"}],"disconnect":[{"__symbolic":"method"}]}}},"importAs":"@angular/material/tree"}]

@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./form-field-module"},{"from":"./error"},{"from":"./form-field"},{"from":"./form-field-control"},{"from":"./form-field-errors"},{"from":"./hint"},{"from":"./placeholder"},{"from":"./prefix"},{"from":"./suffix"},{"from":"./label"},{"from":"./form-field-animations"}],"importAs":"@angular/material/form-field"}]

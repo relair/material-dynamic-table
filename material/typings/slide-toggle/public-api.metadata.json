@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./slide-toggle-module"},{"from":"./slide-toggle"},{"from":"./slide-toggle-config"}],"importAs":"@angular/material/slide-toggle"}]

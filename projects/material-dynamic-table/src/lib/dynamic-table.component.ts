@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { MatMultiSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 import { ColumnConfig } from './column-config.model';
 import { ColumnFilter } from './column-filter.model';
@@ -21,7 +21,7 @@ export class DynamicTableComponent implements OnInit {
 
   displayedColumns: string[];
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatMultiSort) sort: MatMultiSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   private appliedFilters: { [key: string]: ColumnFilter; } = {};
@@ -41,6 +41,14 @@ export class DynamicTableComponent implements OnInit {
     const dataSource = this.dataSource as any;
     dataSource.sort = this.sort;
     dataSource.paginator = this.paginator;
+  }
+
+  getSortCounter(position: number, count: number): string {
+    if (count < 2) {
+      return '';
+    }
+
+     return (position + 1).toString();
   }
 
   canFilter(column: ColumnConfig) {

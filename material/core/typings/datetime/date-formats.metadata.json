@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MatDateFormats":{"__symbolic":"interface"},"MAT_DATE_FORMATS":{"__symbolic":"new","expression":{"__symbolic":"reference","module":"@angular/core","name":"InjectionToken","line":24,"character":36},"arguments":["mat-date-formats"]}},"importAs":"@angular/material/core"}]

@@ -17,7 +17,8 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+			"preserveSymlinks": true,
+			"tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -130,9 +131,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
+          "options": {		    
             "tsConfig": "projects/material-dynamic-table/tsconfig.lib.json",
-            "project": "projects/material-dynamic-table/ng-package.json"
+            "project": "projects/material-dynamic-table/ng-package.json"			
           },
           "configurations": {
             "production": {

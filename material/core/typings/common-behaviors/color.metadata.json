@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"CanColor":{"__symbolic":"interface"},"CanColorCtor":{"__symbolic":"interface"},"HasElementRef":{"__symbolic":"interface"},"ThemePalette":{"__symbolic":"interface"},"mixinColor":{"__symbolic":"function","parameters":["base","defaultColor"],"value":{"__symbolic":"class"}}},"importAs":"@angular/material/core"}]

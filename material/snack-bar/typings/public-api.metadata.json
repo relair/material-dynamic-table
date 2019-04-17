@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./snack-bar-module"},{"from":"./snack-bar"},{"from":"./snack-bar-container"},{"from":"./snack-bar-config"},{"from":"./snack-bar-ref"},{"from":"./simple-snack-bar"},{"from":"./snack-bar-animations"}],"importAs":"@angular/material/snack-bar"}]

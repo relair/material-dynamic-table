@@ -73,7 +73,7 @@ export class AppComponent {
     {
       product: 'Coffee',
       description: 'Prepared from roasted coffee beans',
-      recievedOn: new Date('2015-04-16T23:52:23.565Z'),
+      recievedOn: new Date('2017-11-06T21:22:53.542Z'),
       created: new Date('2016-12-21T21:05:03.253Z')
     },
     {
@@ -86,7 +86,7 @@ export class AppComponent {
       product: 'Floppy disk',
       description: 'It belongs in a museum',
       recievedOn: new Date('2015-10-12T11:12:42.621Z'),
-      created: new Date('2013-03-12T21:54:31.221Z')
+      created: new Date('2014-02-11T11:34:12.442Z')
     },
     {
       product: 'Fan',

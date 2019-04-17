@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"HasTabIndex":{"__symbolic":"interface"},"HasTabIndexCtor":{"__symbolic":"interface"},"mixinTabIndex":{"__symbolic":"function","parameters":["base","defaultTabIndex"],"value":{"__symbolic":"class"},"defaults":[null,0]}},"importAs":"@angular/material/core"}]

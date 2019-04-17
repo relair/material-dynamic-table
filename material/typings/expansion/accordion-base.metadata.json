@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MatAccordionDisplayMode":{"__symbolic":"interface"},"MatAccordionBase":{"__symbolic":"interface"},"MAT_ACCORDION":{"__symbolic":"new","expression":{"__symbolic":"reference","module":"@angular/core","name":"InjectionToken","line":37,"character":33},"arguments":["MAT_ACCORDION"]}},"importAs":"@angular/material/expansion"}]

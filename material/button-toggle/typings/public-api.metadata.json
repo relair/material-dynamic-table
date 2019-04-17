@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./button-toggle"},{"from":"./button-toggle-module"}],"importAs":"@angular/material/button-toggle"}]

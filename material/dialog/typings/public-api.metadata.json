@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./dialog-module"},{"from":"./dialog"},{"from":"./dialog-container"},{"from":"./dialog-content-directives"},{"from":"./dialog-config"},{"from":"./dialog-ref"},{"from":"./dialog-animations"}],"importAs":"@angular/material/dialog"}]

@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MAT_BOTTOM_SHEET_DATA":{"__symbolic":"new","expression":{"__symbolic":"reference","module":"@angular/core","name":"InjectionToken","line":12,"character":41},"arguments":["MatBottomSheetData"]},"MatBottomSheetConfig":{"__symbolic":"class","arity":1}},"importAs":"@angular/material/bottom-sheet"}]

@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MatCheckboxClickAction":{"__symbolic":"interface"},"MAT_CHECKBOX_CLICK_ACTION":{"__symbolic":"new","expression":{"__symbolic":"reference","module":"@angular/core","name":"InjectionToken","line":23,"character":8},"arguments":["mat-checkbox-click-action"]}},"importAs":"@angular/material/checkbox"}]

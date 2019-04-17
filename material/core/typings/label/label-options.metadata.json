@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"MAT_LABEL_GLOBAL_OPTIONS":{"__symbolic":"new","expression":{"__symbolic":"reference","module":"@angular/core","name":"InjectionToken","line":12,"character":6},"arguments":["mat-label-global-options"]},"FloatLabelType":{"__symbolic":"interface"},"LabelOptions":{"__symbolic":"interface"}},"importAs":"@angular/material/core"}]

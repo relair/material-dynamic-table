@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./paginator-module"},{"from":"./paginator"},{"from":"./paginator-intl"}],"importAs":"@angular/material/paginator"}]

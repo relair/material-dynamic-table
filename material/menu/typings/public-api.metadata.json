@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./menu-module"},{"from":"./menu"},{"from":"./menu-animations"},{"from":"./menu-content"},{"from":"./menu-trigger","export":["MAT_MENU_SCROLL_STRATEGY"]}],"importAs":"@angular/material/menu"}]

@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./list-module"},{"from":"./list"},{"from":"./selection-list"}],"importAs":"@angular/material/list"}]

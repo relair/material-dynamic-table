@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"CanDisableRipple":{"__symbolic":"interface"},"CanDisableRippleCtor":{"__symbolic":"interface"},"mixinDisableRipple":{"__symbolic":"function","parameters":["base"],"value":{"__symbolic":"class"}}},"importAs":"@angular/material/core"}]

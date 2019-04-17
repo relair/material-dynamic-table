@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./expansion-module"},{"from":"./accordion"},{"from":"./accordion-base"},{"from":"./expansion-panel"},{"from":"./expansion-panel-header"},{"from":"./expansion-panel-content"},{"from":"./expansion-animations"}],"importAs":"@angular/material/expansion"}]

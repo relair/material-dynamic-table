@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"CanDisable":{"__symbolic":"interface"},"CanDisableCtor":{"__symbolic":"interface"},"mixinDisabled":{"__symbolic":"function","parameters":["base"],"value":{"__symbolic":"class"}}},"importAs":"@angular/material/core"}]
