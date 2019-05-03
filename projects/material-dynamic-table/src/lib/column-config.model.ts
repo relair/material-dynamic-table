@@ -4,4 +4,5 @@
     type: string;
     options?: any;
     sticky?: string;
+    sort?: boolean;
 }

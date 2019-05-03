@@ -36,7 +36,7 @@ export class DynamicTableComponent implements OnInit {
       throw Error('DynamicTable must be provided with column definitions.');
     }
 
-    this.displayedColumns = this.columns.map(column => column.name);
+    this.displayedColumns = this.columns.map((column, index) => this.prepareColumnName(column.name, index));
     
     const dataSource = this.dataSource as any;
     dataSource.sort = this.sort;
@@ -59,6 +59,10 @@ export class DynamicTableComponent implements OnInit {
 
   isFiltered(column: ColumnConfig) {
     return this.appliedFilters[column.name];
+  }
+
+  prepareColumnName(name: string, columnNumber: number) {   
+    return name || 'col' + columnNumber;
   }
 
   filter(column: ColumnConfig) {
