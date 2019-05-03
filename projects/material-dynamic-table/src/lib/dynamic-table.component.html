@@ -3,7 +3,7 @@
 
   <ng-container *ngFor="let column of columns; let i = index" matColumnDef="{{ prepareColumnName(column.name, i) }}"
                 [sticky]="column.sticky === 'start'" [stickyEnd]="column.sticky === 'end'">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header="{{ prepareColumnName(column.name, i) }}" [disabled]="!column.name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="{{ prepareColumnName(column.name, i) }}" [disabled]="!column.name || column.sort === false">
       {{ column.displayName }}
       <button class="mat-sort-header-button" *ngIf="showFilters && canFilter(column)" (click)="filter(column); $event.stopPropagation();">
         <mat-icon color="{{ isFiltered(column) ? 'primary' : 'default' }}">filter_list</mat-icon>

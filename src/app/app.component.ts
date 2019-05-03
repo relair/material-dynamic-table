@@ -24,7 +24,8 @@ export class AppComponent {
     {
       name: 'description',
       displayName: 'Description',
-      type: 'string'
+      type: 'string',
+      sort: false
     },
     {
       name: 'recievedOn',
