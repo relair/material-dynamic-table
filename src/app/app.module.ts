@@ -10,7 +10,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatMenuModule,
-  MatIconModule
+  MatIconModule,
+  MatPaginatorModule
 } from '@angular/material';
 
 import { OptionsCellComponent } from './cells/options-cell/options-cell.component';
@@ -40,7 +41,8 @@ import { AppComponent } from './app.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule
   ],
   entryComponents: [
     OptionsCellComponent,  

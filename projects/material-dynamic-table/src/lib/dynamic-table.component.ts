@@ -21,8 +21,10 @@ export class DynamicTableComponent implements OnInit {
 
   displayedColumns: string[];
 
+  paginator: MatPaginator;
+
   @ViewChild(MatMultiSort) sort: MatMultiSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) private internalPaginator: MatPaginator;
 
   private appliedFilters: { [key: string]: ColumnFilter; } = {};
   
@@ -35,6 +37,10 @@ export class DynamicTableComponent implements OnInit {
     if (this.columns == null) {
       throw Error('DynamicTable must be provided with column definitions.');
     }
+
+    if (this.paginator === undefined) {
+      this.paginator = this.internalPaginator;
+    }    
 
     this.displayedColumns = this.columns.map((column, index) => this.prepareColumnName(column.name, index));
     
@@ -51,6 +57,10 @@ export class DynamicTableComponent implements OnInit {
      return (position + 1).toString();
   }
 
+  isUsingInternalPaginator() {
+    return this.paginator === this.internalPaginator;
+  }
+  
   canFilter(column: ColumnConfig) {
     const filter = this.columnFilterService.getFilter(column.type);
 

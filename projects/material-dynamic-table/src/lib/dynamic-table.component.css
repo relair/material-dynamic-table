@@ -9,3 +9,7 @@ th .mat-icon.mat-default {
 th .mat-icon.mat-default:hover {
     opacity: 1;
 }
+
+[hidden] {
+    display: none;
+}

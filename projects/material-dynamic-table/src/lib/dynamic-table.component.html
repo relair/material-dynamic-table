@@ -15,6 +15,6 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: [stickyHeader]"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-<mat-paginator [pageSize]="pageSize"
+<mat-paginator [hidden]="!isUsingInternalPaginator()" [pageSize]="pageSize"
                [pageSizeOptions]="pageSizeOptions">
 </mat-paginator>
