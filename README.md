@@ -146,6 +146,7 @@ export class AppComponent {
 | @Input() pageSizeOptions :  number[] | The set of provided page size options to display to the user.               |
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
+| @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
 
 #### ColumnConfig definition
 ColumnConfig is used to provide specification for the columns to be displayed
@@ -157,6 +158,7 @@ ColumnConfig is used to provide specification for the columns to be displayed
 | type             | Type of the data displayed by this column - it should match one of your defined cell types |
 | options          | Optional field that can be used to pass extra data for cells                               |
 | sticky           | Optional field that can make column sticky to start or end of table. Values: 'start', 'end'|
+| sort             | Optional field that can disable sort on the column if the value is false                   |
 
 #### Cell types
 By default there are two types provided:
