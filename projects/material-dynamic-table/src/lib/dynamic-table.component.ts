@@ -18,10 +18,9 @@ export class DynamicTableComponent implements OnInit {
   @Input() pageSizeOptions = [20, 50, 100];
   @Input() showFilters = true;
   @Input() stickyHeader = false;
+  @Input() paginator: MatPaginator;
 
   displayedColumns: string[];
-
-  paginator: MatPaginator;
 
   @ViewChild(MatMultiSort) sort: MatMultiSort;
   @ViewChild(MatPaginator) private internalPaginator: MatPaginator;

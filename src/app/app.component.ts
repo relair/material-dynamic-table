@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material';
 import { FilteredDataSource } from './data-source/filtered-data-source';
 import { ColumnConfig, DynamicTableComponent } from 'material-dynamic-table';
@@ -9,7 +9,7 @@ import { Product } from './product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'material-dynamic-table-demo';
 
   @ViewChild(DynamicTableComponent) dynamicTable: DynamicTableComponent;
@@ -100,10 +100,6 @@ export class AppComponent implements OnInit {
   ];
 
   dataSource = new FilteredDataSource<Product>(this.data);
-
-  ngOnInit() {
-    this.dynamicTable.paginator = this.paginator;
-  }
 
   clearFilters() {    
     this.dynamicTable.clearFilters();
