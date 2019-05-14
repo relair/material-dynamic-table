@@ -18,23 +18,38 @@ export class FilteredDataSource<T> extends MatTableDataSource<T> {
             return true;
         }
 
-        for (const tableFilter of this._filters) {
+        const result = this._filters.reduce((visible, tableFilter) => {
+            if (!visible) {
+                return visible;
+            }
+
             const filter = tableFilter.getFilter();
-            for (const key of Object.keys(filter)) {
-                if (filter[key].contains && data[key].indexOf(filter[key].contains) !== -1) {
-                    return true;
+
+            return Object.keys(filter).reduce((show, columnName) => {
+                if (!show) {
+                    return show;
                 }
-                
-                if (filter[key].le && filter[key].ge) {                    
-                    if (data[key].getTime() >= filter[key].ge.getTime() && data[key].getTime() <= filter[key].le.getTime()) {
-                        return true;
-                    }
-                } else if (filter[key].ge && data[key].getTime() >= filter[key].ge.getTime()) {
-                    return true;
-                } else if (filter[key].le && data[key].getTime() <= filter[key].le.getTime()) {
-                    return true;
-                }
-            }            
+                return this.matchesFilter(filter[columnName], data[columnName]);
+            }, true);
+        }, true);
+
+        return result;
+    }
+
+    private matchesFilter(filterForColumn: any, dataForColumn: any): boolean {        
+
+        if (filterForColumn.contains && dataForColumn.indexOf(filterForColumn.contains) !== -1) {
+            return true;
+        }
+        
+        if (filterForColumn.le && filterForColumn.ge) {                    
+            if (dataForColumn.getTime() >= filterForColumn.ge.getTime() && dataForColumn.getTime() <= filterForColumn.le.getTime()) {
+                return true;
+            }
+        } else if (filterForColumn.ge && dataForColumn.getTime() >= filterForColumn.ge.getTime()) {
+            return true;
+        } else if (filterForColumn.le && dataForColumn.getTime() <= filterForColumn.le.getTime()) {
+            return true;
         }
 
         return false;
