@@ -148,6 +148,16 @@ export class AppComponent {
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
 
+
+##### Methods
+| Name         | Description                                                                                         |
+|--------------|-----------------------------------------------------------------------------------------------------|
+| getFilter(columnName: string): any         | Returns currently set filter for the column with provided name        |
+| setFilter(columnName: string, filter: any) | Sets the filter for the column with provided name                     |
+| getFilters()                               | Returns all set column filters                                        |
+| clearFilters()                             | Removes all applied filters                                           |
+
+
 #### ColumnConfig definition
 ColumnConfig is used to provide specification for the columns to be displayed
 

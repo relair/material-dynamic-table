@@ -22,11 +22,11 @@ export class DynamicTableComponent implements OnInit {
 
   displayedColumns: string[];
 
-  @ViewChild(MatSort) sort: MatSort;  
+  @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) private internalPaginator: MatPaginator;
 
-  private appliedFilters: { [key: string]: ColumnFilter; } = {};
-  
+  private appliedFilters: { [key: string]: any; } = {};
+
   constructor(private readonly columnFilterService: ColumnFilterService, private readonly dialog: MatDialog) { }
 
   ngOnInit() {
@@ -39,10 +39,10 @@ export class DynamicTableComponent implements OnInit {
 
     if (this.paginator === undefined) {
       this.paginator = this.internalPaginator;
-    }    
+    }
 
     this.displayedColumns = this.columns.map((column, index) => this.prepareColumnName(column.name, index));
-    
+
     const dataSource = this.dataSource as any;
     dataSource.sort = this.sort;
     dataSource.paginator = this.paginator;
@@ -62,7 +62,7 @@ export class DynamicTableComponent implements OnInit {
     return this.appliedFilters[column.name];
   }
 
-  prepareColumnName(name: string, columnNumber: number) {   
+  prepareColumnName(name: string, columnNumber: number) {
     return name || 'col' + columnNumber;
   }
 
@@ -79,7 +79,7 @@ export class DynamicTableComponent implements OnInit {
       }
 
       dialogConfig.data = columnFilter;
-        
+
       const dialogRef = this.dialog.open(filter, dialogConfig);
 
       dialogRef.afterClosed().subscribe(result => {
@@ -88,7 +88,7 @@ export class DynamicTableComponent implements OnInit {
         } else if (result === '') {
           delete this.appliedFilters[column.name];
         }
-        
+
         if (result || result === '') {
           this.updateDataSource();
         }
@@ -110,5 +110,32 @@ export class DynamicTableComponent implements OnInit {
     const filters = this.appliedFilters;
     const filterArray = Object.keys(filters).map((key) => filters[key]);
     return filterArray;
+  }
+
+  getFilter(columnName: string): any {
+    const filterColumn = this.getColumnByName(columnName);
+
+    if (!filterColumn) {
+      throw Error(`Column with name '${columnName}' does not exist.`);
+    }
+
+    return this.appliedFilters[filterColumn.name];
+  }
+
+  setFilter(columnName: string, filter: any) {
+    const filterColumn = this.getColumnByName(columnName);
+
+    if (!filterColumn) {
+      throw Error(`Cannot set filter for a column. Column with name '${columnName}' does not exist.`);
+    }
+
+    this.appliedFilters[filterColumn.name] = filter;
+    this.updateDataSource();
+  }
+
+  private getColumnByName(columnName: string): ColumnConfig {
+    return this.columns.find(c =>
+      (c.name ? c.name.toLowerCase() : c.name) === (columnName ? columnName.toLowerCase() : columnName)
+    );
   }
 }
