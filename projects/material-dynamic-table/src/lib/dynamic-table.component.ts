@@ -62,6 +62,15 @@ export class DynamicTableComponent implements OnInit {
     return this.appliedFilters[column.name];
   }
 
+  getFilterDescription(column: ColumnConfig) {
+    const filter = this.appliedFilters[column.name];
+    if (!filter || !filter.getDescription) {
+      return null;
+    }
+
+    return filter.getDescription();
+  }
+
   prepareColumnName(name: string, columnNumber: number) {
     return name || 'col' + columnNumber;
   }

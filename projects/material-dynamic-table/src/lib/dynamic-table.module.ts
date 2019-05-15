@@ -6,7 +6,8 @@ import {
   MatSortModule,
   MatPaginatorModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { DynamicTableComponent } from './dynamic-table.component';
@@ -20,6 +21,7 @@ export { CellService, CellDirective, ColumnFilterService };
 export { CellComponent } from './table-cell/cell-types/cell.component';
 export { ColumnFilter } from './column-filter.model';
 export { ColumnConfig } from './column-config.model';
+export { FilterDescription } from './filter-description';
 
 import { TextCellComponent } from './table-cell/cell-types/text-cell.component';
 import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
@@ -31,7 +33,8 @@ import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   declarations: [
     DynamicTableComponent,
