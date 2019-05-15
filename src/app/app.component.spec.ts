@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DynamicTableModule } from 'material-dynamic-table';
+import { MatPaginatorModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
@@ -11,6 +12,7 @@ describe('AppComponent', () => {
       ],
       imports: [       
         DynamicTableModule,
+        MatPaginatorModule,
         NoopAnimationsModule
       ],
     }).compileComponents();
