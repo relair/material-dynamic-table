@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material';
 import { FilteredDataSource } from './data-source/filtered-data-source';
 import { ColumnConfig, DynamicTableComponent } from 'material-dynamic-table';
 import { Product } from './product';
+import { TextFilter } from './filters/text-filter/text-filter.model';
+import { DateFilter } from './filters/date-filter/date-filter.model';
 
 @Component({
   selector: 'ld-root',
@@ -103,5 +105,23 @@ export class AppComponent {
 
   clearFilters() {    
     this.dynamicTable.clearFilters();
+  }
+
+  setFilter() {
+    const createdColumnName = 'created';
+    const appliedFilter = this.dynamicTable.getFilter(createdColumnName);
+    if (!appliedFilter) {
+      const filter = new DateFilter(createdColumnName);
+      filter.fromDate = new Date(2015, 1, 1);
+      filter.toDate = new Date(2015, 12, 31);
+
+      this.dynamicTable.setFilter(createdColumnName, filter);      
+    } else {
+      const columnName = 'description';
+      const filter = new TextFilter(columnName);
+      filter.value = 'Loud';
+
+      this.dynamicTable.setFilter(columnName, filter);      
+    }
   }
 }

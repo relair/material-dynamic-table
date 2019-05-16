@@ -148,6 +148,16 @@ export class AppComponent {
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
 
+
+##### Methods
+| Name         | Description                                                                                         |
+|--------------|-----------------------------------------------------------------------------------------------------|
+| getFilter(columnName: string): any         | Returns currently set filter for the column with provided name        |
+| setFilter(columnName: string, filter: any) | Sets the filter for the column with provided name                     |
+| getFilters()                               | Returns all set column filters                                        |
+| clearFilters()                             | Removes all applied filters                                           |
+
+
 #### ColumnConfig definition
 ColumnConfig is used to provide specification for the columns to be displayed
 
@@ -257,3 +267,6 @@ export class AppModule {
 
 In this case it is a filter for `string` cell type named `TextFilterComponent`. See the example project for full design.
 To make use of filters you need to have data source that can handle them. See `FilteredDataSource` from the example to see how `MatTableDataSource` can be extended to handle it.
+
+Filters can have a description that is displayed when the filter is applied. To set the description for the filter the filter model should have a method getDescription that returns a string.
+Implement interface 'FilterDescription' for your filter model to have the description displayed.

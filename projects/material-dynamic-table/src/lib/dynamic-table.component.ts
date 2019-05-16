@@ -25,7 +25,7 @@ export class DynamicTableComponent implements OnInit {
   @ViewChild(MatMultiSort) sort: MatMultiSort;
   @ViewChild(MatPaginator) private internalPaginator: MatPaginator;
 
-  private appliedFilters: { [key: string]: ColumnFilter; } = {};
+  private appliedFilters: { [key: string]: any; } = {};
   
   constructor(private readonly columnFilterService: ColumnFilterService, private readonly dialog: MatDialog) { }
 
@@ -68,6 +68,15 @@ export class DynamicTableComponent implements OnInit {
 
   isFiltered(column: ColumnConfig) {
     return this.appliedFilters[column.name];
+  }
+
+  getFilterDescription(column: ColumnConfig) {
+    const filter = this.appliedFilters[column.name];
+    if (!filter || !filter.getDescription) {
+      return null;
+    }
+
+    return filter.getDescription();
   }
 
   prepareColumnName(name: string, columnNumber: number) {   
@@ -118,5 +127,32 @@ export class DynamicTableComponent implements OnInit {
     const filters = this.appliedFilters;
     const filterArray = Object.keys(filters).map((key) => filters[key]);
     return filterArray;
+  }
+
+  getFilter(columnName: string): any {
+    const filterColumn = this.getColumnByName(columnName);
+
+    if (!filterColumn) {
+      throw Error(`Column with name '${columnName}' does not exist.`);
+    }
+
+    return this.appliedFilters[filterColumn.name];
+  }
+
+  setFilter(columnName: string, filter: any) {
+    const filterColumn = this.getColumnByName(columnName);
+
+    if (!filterColumn) {
+      throw Error(`Cannot set filter for a column. Column with name '${columnName}' does not exist.`);
+    }
+
+    this.appliedFilters[filterColumn.name] = filter;
+    this.updateDataSource();
+  }
+
+  private getColumnByName(columnName: string): ColumnConfig {
+    return this.columns.find(c =>
+      (c.name ? c.name.toLowerCase() : c.name) === (columnName ? columnName.toLowerCase() : columnName)
+    );
   }
 }
