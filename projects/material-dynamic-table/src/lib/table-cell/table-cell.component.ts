@@ -9,7 +9,7 @@ import { ColumnConfig } from '../column-config.model';
     template: '<ng-template mdtCellHost></ng-template>'
 })
 export class TableCellComponent implements OnInit {
-    @ViewChild(CellDirective) cellHost: CellDirective;
+    @ViewChild(CellDirective, { static: true }) cellHost: CellDirective;
 
     @Input() row: object;
     @Input() column: ColumnConfig;

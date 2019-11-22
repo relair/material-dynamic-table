@@ -14,9 +14,9 @@ import { DateFilter } from './filters/date-filter/date-filter.model';
 export class AppComponent {
   title = 'material-dynamic-table-demo';
 
-  @ViewChild(DynamicTableComponent) dynamicTable: DynamicTableComponent;
+  @ViewChild(DynamicTableComponent, { static: true }) dynamicTable: DynamicTableComponent;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   columns: ColumnConfig[] = [
     {

@@ -22,8 +22,8 @@ export class DynamicTableComponent implements OnInit {
 
   displayedColumns: string[];
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) private internalPaginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) private internalPaginator: MatPaginator;
 
   private appliedFilters: { [key: string]: any; } = {};
 
