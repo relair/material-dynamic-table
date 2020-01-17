@@ -5,4 +5,5 @@
     options?: any;
     sticky?: string;
     sort?: boolean;
+    hint?: string;
 }

@@ -23,18 +23,21 @@ export class AppComponent {
       name: 'product',
       displayName: 'Product',
       type: 'string',
-      sticky: 'start'
+      sticky: 'start',
+      hint: 'Product name'
     },
     {
       name: 'description',
       displayName: 'Description',
       type: 'string',
-      sort: false
+      sort: false,
+      hint: 'Product Description'
     },
     {
       name: 'recievedOn',
       displayName: 'Recieved On',
-      type: 'date'
+      type: 'date',
+      hint: 'Date product was received on'
     },
     {
       name: 'created',
@@ -42,7 +45,8 @@ export class AppComponent {
       type: 'date',
       options: {
         dateFormat: 'shortDate'
-      }
+      },
+      hint: 'Date entry was created'
     },
     {
       type: 'options',

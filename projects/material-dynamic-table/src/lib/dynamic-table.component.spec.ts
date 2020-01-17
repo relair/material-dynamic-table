@@ -7,7 +7,8 @@ import {
   MatSortModule,
   MatPaginatorModule,
   MatIconModule,
-  MatDialogModule
+  MatTooltipModule,
+  MatDialogModule  
 } from '@angular/material';
 
 import { DynamicTableComponent } from './dynamic-table.component';
@@ -25,6 +26,7 @@ describe('DynamicTableComponent', () => {
         MatSortModule,
         MatPaginatorModule,
         MatIconModule,
+        MatTooltipModule,
         MatDialogModule,
         NoopAnimationsModule
       ],

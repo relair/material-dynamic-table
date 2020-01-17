@@ -18,6 +18,7 @@ export class DynamicTableComponent implements OnInit {
   @Input() pageSizeOptions = [20, 50, 100];
   @Input() showFilters = true;
   @Input() stickyHeader = false;
+  @Input() hintDelay = 500;
   @Input() paginator: MatPaginator;
 
   displayedColumns: string[];
