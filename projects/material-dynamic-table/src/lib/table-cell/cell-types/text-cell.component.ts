@@ -4,9 +4,10 @@ import { ColumnConfig } from '../../column-config.model';
 
 @Component({
     selector: 'mdt-text-cell',
-    template: '{{ row[column.name] }}'
+    template: '<span click="navFunction(row)">{{ row[column.name] }}</span>'
 })
 export class TextCellComponent implements CellComponent {
     @Input() column: ColumnConfig;
     @Input() row: object;
+    //navUrl: string;
 }

@@ -5,4 +5,6 @@
     options?: any;
     sticky?: string;
     sort?: boolean;
+    //navigationUrl?: (inputRow: any) => string
+    navFunction?: (row: any) => unknown;
 }
