@@ -1,27 +1,54 @@
 {
-  "name": "material-dynamic-table",
+  "name": "lib-demo",
   "version": "8.3.0",
-  "license": "MIT",
-  "author": "Marcin Suty",
-  "description": "Dynamic table component for angular built on top of angular material table. It offers sorting, pagination, filtering per column and the ability to specify content types and components used for displaying them.",
-  "keywords": [
-    "angular",
-    "angular2",
-	"angular8",
-    "ng",
-    "ng2",
-    "dynamic",
-    "material",
-    "table",
-    "data"
-  ],
-  "repository": {
-    "url": "https://github.com/hade94/material-dynamic-table.git",
-    "type": "git"
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "copy": "cp README.md dist/material-dynamic-table",
+    "build-lib": "ng build --prod material-dynamic-table && npm run copy"
   },
-  "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/material": "^8.0.0"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^8.2.14",
+    "@angular/cdk": "^8.2.3",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/material": "^8.2.3",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/router": "^8.2.14",
+    "rxjs": "^6.5.3",
+    "zone.js": "^0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.19",
+    "@angular-devkit/build-ng-packagr": "^0.803.19",
+    "@angular/cli": "^8.3.19",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/language-service": "^7.2.15",
+    "@types/jasmine": "^2.8.16",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~5.2.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^2.0.6",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^5.2.0",
+    "protractor": "^5.4.2",
+    "ts-node": "~7.0.0",
+    "tsickle": "~0.36.0",
+    "tslib": "^1.10.0",
+    "tslint": "~5.11.0",
+    "typescript": "3.5.3"
   }
 }
