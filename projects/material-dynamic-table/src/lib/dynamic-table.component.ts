@@ -19,6 +19,7 @@ export class DynamicTableComponent implements OnInit {
   @Input() showFilters = true;
   @Input() stickyHeader = false;
   @Input() paginator: MatPaginator;
+  @Input() onClick: (row: any) => unknown = (row) => {return;};
 
   displayedColumns: string[];
 
