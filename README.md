@@ -78,7 +78,8 @@ export class AppComponent {
     {
       name: 'recievedOn',
       displayName: 'Received On',
-      type: 'date'
+      type: 'date',
+      onClick: (row) => this.router.navigate(['app/details/', row.product])
     },
     {
       name: 'created',
@@ -147,6 +148,8 @@ export class AppComponent {
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
+| @Input() onClick : (row: any) => unknown    | Optional overridable function that triggers when clicked on the mat-row |
+  
 
 
 ##### Methods
@@ -169,6 +172,7 @@ ColumnConfig is used to provide specification for the columns to be displayed
 | options          | Optional field that can be used to pass extra data for cells                               |
 | sticky           | Optional field that can make column sticky to start or end of table. Values: 'start', 'end'|
 | sort             | Optional field that can disable sort on the column if the value is false                   |
+| onClick          | Optional overridable function that triggers when clicked on the cell                       |
 
 #### Cell types
 By default there are two types provided:
