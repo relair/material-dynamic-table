@@ -16,7 +16,7 @@
     "data"
   ],
   "repository": {
-    "url": "https://github.com/hade94/material-dynamic-table.git",
+    "url": "https://github.com/relair/material-dynamic-table.git",
     "type": "git"
   },
   "peerDependencies": {
