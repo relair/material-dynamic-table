@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
 import { FilteredDataSource } from './data-source/filtered-data-source';
 import { ColumnConfig, DynamicTableComponent } from 'material-dynamic-table';
 import { Product } from './product';

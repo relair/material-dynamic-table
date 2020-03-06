@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
 import { DataSource } from '@angular/cdk/table';
 import { ColumnConfig } from './column-config.model';
 import { ColumnFilter } from './column-filter.model';

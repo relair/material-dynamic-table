@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/material-dynamic-table.svg)](//npmjs.com/package/material-dynamic-table)
+
 # material-dynamic-table
 
 Dynamic table component for angular built on top of angular material table. It offers sorting, pagination, filtering per column and the ability to specify content types and components used for displaying them.
@@ -15,6 +17,8 @@ Run `ng serve` for the main project to launch demo for this library.
 
 Angular material:
 Please follow https://material.angular.io/guide/getting-started
+The supported version of Angular Material will be indicated by the major version number of this library. Version 8.3.0
+is for Angular Material ^8.0.0, version 9.3.0 is for ^9.0.0, while versions <1.3.0 should work for versions <8.0.0.
 
 Filter is using material icon, so adding material icons may be needed as well:
 https://material.angular.io/guide/getting-started#step-6-optional-add-material-icons

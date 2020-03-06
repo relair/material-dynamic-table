@@ -1,6 +1,6 @@
 {
   "name": "lib-demo",
-  "version": "8.3.0",
+  "version": "9.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,36 +9,37 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "copy": "cp README.md dist/material-dynamic-table",
-    "build-lib": "ng build --prod material-dynamic-table && npm run copy"
+    "build-lib": "ng build --prod material-dynamic-table && npm run copy",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^8.2.14",
-    "@angular/cdk": "^8.2.3",
-    "@angular/common": "^8.2.14",
-    "@angular/compiler": "^8.2.14",
-    "@angular/core": "^8.2.14",
-    "@angular/forms": "^8.2.14",
-    "@angular/material": "^8.2.3",
-    "@angular/platform-browser": "^8.2.14",
-    "@angular/platform-browser-dynamic": "^8.2.14",
-    "@angular/router": "^8.2.14",
-    "rxjs": "^6.5.3",
-    "zone.js": "^0.9.1"
+    "@angular/animations": "^9.0.5",
+    "@angular/cdk": "^9.1.1",
+    "@angular/common": "^9.0.5",
+    "@angular/compiler": "^9.0.5",
+    "@angular/core": "^9.0.5",
+    "@angular/forms": "^9.0.5",
+    "@angular/material": "^9.1.1",
+    "@angular/platform-browser": "^9.0.5",
+    "@angular/platform-browser-dynamic": "^9.0.5",
+    "@angular/router": "^9.0.5",
+    "rxjs": "^6.5.4",
+    "zone.js": "^0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.19",
+    "@angular-devkit/build-angular": "^0.900.5",
     "@angular-devkit/build-ng-packagr": "^0.803.19",
-    "@angular/cli": "^8.3.19",
-    "@angular/compiler-cli": "^8.2.14",
-    "@angular/language-service": "^7.2.15",
+    "@angular/cli": "^9.0.5",
+    "@angular/compiler-cli": "^9.0.5",
+    "@angular/language-service": "^9.0.5",
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "^2.0.8",
-    "@types/node": "~8.9.4",
+    "@types/node": "~13.7.7",
     "codelyzer": "~5.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.0.0",
+    "karma": "~4.4.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.6",
     "karma-jasmine": "~1.1.2",
@@ -49,6 +50,6 @@
     "tsickle": "~0.36.0",
     "tslib": "^1.10.0",
     "tslint": "~5.11.0",
-    "typescript": "3.5.3"
+    "typescript": "3.7.5"
   }
 }
