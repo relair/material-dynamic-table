@@ -136,6 +136,7 @@
           },
           "configurations": {
             "production": {
+              "tsConfig": "projects/material-dynamic-table/tsconfig.lib.prod.json"
             }
           }
         },
