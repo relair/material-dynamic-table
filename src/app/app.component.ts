@@ -45,8 +45,10 @@ export class AppComponent {
       }
     },
     {
+      name: '',
       type: 'options',
-      sticky: 'end'
+      sticky: 'end',
+      sort: false
     }
   ];
 

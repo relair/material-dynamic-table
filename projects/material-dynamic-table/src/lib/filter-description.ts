@@ -1,3 +1,3 @@
 export interface FilterDescription {
-    getDescription(): string;
+    getDescription(): string | null;
 }

@@ -37,6 +37,8 @@ export class DateFilter implements TableFilter, FilterDescription {
             return `is after ${formatDate(this.fromDate)}`;
         } else if (this.toDate) {
             return `is before ${formatDate(this.toDate)}`;
-        }           
+        } else {
+            return null;
+        }        
     }
 }

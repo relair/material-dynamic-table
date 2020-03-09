@@ -11,7 +11,7 @@ export class DateFilterComponent implements OnInit {
 
     model: DateFilter;
 
-    displayName: string;
+    displayName: string | undefined;
 
     public constructor(
         private readonly dialogRef: MatDialogRef<DateFilterComponent>,

@@ -44,7 +44,8 @@ export class DynamicTableComponent implements OnInit {
       this.paginator = this.internalPaginator;
     }
 
-    this.displayedColumns = this.columns.map((column, index) => this.prepareColumnName(column.name, index));
+    this.columns.forEach((column, index) => column.name = this.prepareColumnName(column.name, index));
+    this.displayedColumns = this.columns.map((column, index) => column.name);
 
     const dataSource = this.dataSource as any;
     dataSource.sort = this.sort;
@@ -74,7 +75,7 @@ export class DynamicTableComponent implements OnInit {
     return filter.getDescription();
   }
 
-  prepareColumnName(name: string, columnNumber: number) {
+  prepareColumnName(name: string | undefined, columnNumber: number) {
     return name || 'col' + columnNumber;
   }
 
@@ -145,7 +146,7 @@ export class DynamicTableComponent implements OnInit {
     this.updateDataSource();
   }
 
-  private getColumnByName(columnName: string): ColumnConfig {
+  private getColumnByName(columnName: string): ColumnConfig | undefined {
     return this.columns.find(c =>
       (c.name ? c.name.toLowerCase() : c.name) === (columnName ? columnName.toLowerCase() : columnName)
     );
