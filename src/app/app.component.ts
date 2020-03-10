@@ -126,4 +126,8 @@ export class AppComponent {
       this.dynamicTable.setFilter(columnName, filter);      
     }
   }
+
+  onRowClick(row: any) {
+    console.log(row);
+  }
 }

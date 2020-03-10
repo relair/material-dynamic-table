@@ -10,7 +10,8 @@
                [pageSizeOptions]="[2, 4, 6, 8]">
 </mat-paginator>
 <div class="mat-elevation-z2 table-container">
-  <mdt-dynamic-table [columns]="columns" [dataSource]="dataSource" [paginator]="paginator" [stickyHeader]="true"></mdt-dynamic-table>
+  <mdt-dynamic-table [columns]="columns" [dataSource]="dataSource" [paginator]="paginator" [stickyHeader]="true"
+  (rowClick)="onRowClick($event)"></mdt-dynamic-table>
 </div>
 
 <div class="buttons">

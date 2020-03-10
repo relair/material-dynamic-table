@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -23,12 +23,14 @@ export class DynamicTableComponent implements OnInit {
   @Input() stickyHeader = false;
   @Input() paginator: MatPaginator;
 
+  @Output() rowClick = new EventEmitter<any>();
+
   displayedColumns: string[];
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) private internalPaginator: MatPaginator;
 
-  private appliedFilters: { [key: string]: any; } = {};
+  private appliedFilters: { [key: string]: any; } = {}; 
 
   constructor(private readonly columnFilterService: ColumnFilterService, private readonly dialog: MatDialog) { }
 
@@ -150,5 +152,9 @@ export class DynamicTableComponent implements OnInit {
     return this.columns.find(c =>
       (c.name ? c.name.toLowerCase() : c.name) === (columnName ? columnName.toLowerCase() : columnName)
     );
+  }
+
+  onRowClick(row: any) {
+    this.rowClick.next(row);
   }
 }
