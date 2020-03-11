@@ -151,7 +151,7 @@ export class AppComponent {
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
-
+| @Output() rowClick: EventEmitter<any> | Event emmited when row is clicked, parameter is the object used for displaying the row |
 
 ##### Methods
 | Name         | Description                                                                                         |
