@@ -1,6 +1,7 @@
-import { Type } from '@angular/core';
+import { Type, Injectable } from '@angular/core';
 import { TextCellComponent } from './text-cell.component';
 
+@Injectable()
 export class CellService {
 
     private registeredCells: { [key: string]: Type<any>; } = {};

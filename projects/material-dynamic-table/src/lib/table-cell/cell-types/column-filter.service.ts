@@ -1,5 +1,6 @@
-import { Type } from '@angular/core';
+import { Type, Injectable } from '@angular/core';
 
+@Injectable()
 export class ColumnFilterService {
 
     private registeredFilters: { [key: string]: Type<any>; } = {};

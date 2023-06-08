@@ -13,3 +13,16 @@ th .mat-icon.mat-default:hover {
 [hidden] {
     display: none;
 }
+
+button.mat-sort-header-button {
+  border: none;
+  background: 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  cursor: inherit;
+  outline: 0;
+  font: inherit;
+  color: currentColor;
+  position: relative;
+}
