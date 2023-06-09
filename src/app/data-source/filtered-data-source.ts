@@ -1,4 +1,4 @@
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { TableFilter } from './table-filter';
 
 export class FilteredDataSource<T> extends MatTableDataSource<T> {

@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@angular/material/legacy-prebuilt-themes/legacy-deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -79,18 +80,6 @@
               "src/assets"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -109,16 +98,7 @@
               "devServerTarget": "lib-demo:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
+        }        
       }
     },
     "material-dynamic-table": {
@@ -146,19 +126,7 @@
             "tsConfig": "projects/material-dynamic-table/tsconfig.spec.json",
             "karmaConfig": "projects/material-dynamic-table/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/material-dynamic-table/tsconfig.lib.json",
-              "projects/material-dynamic-table/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
+        }       
       }
     }
   }
