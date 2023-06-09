@@ -25,31 +25,27 @@ import { TextCellComponent } from './table-cell/cell-types/text-cell.component';
 import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
-    MatIconModule,
-    MatDialogModule,
-    MatTooltipModule
-  ],
-  declarations: [
-    DynamicTableComponent,
-    TableCellComponent,
-    CellDirective,
-    TextCellComponent,
-    DateCellComponent
-  ],
-  exports: [DynamicTableComponent],
-  entryComponents: [
-    TextCellComponent,
-    DateCellComponent
-  ],
-  providers: [
-    CellService,
-    ColumnFilterService
-  ]
+    imports: [
+        CommonModule,
+        MatTableModule,
+        MatSortModule,
+        MatPaginatorModule,
+        MatIconModule,
+        MatDialogModule,
+        MatTooltipModule
+    ],
+    declarations: [
+        DynamicTableComponent,
+        TableCellComponent,
+        CellDirective,
+        TextCellComponent,
+        DateCellComponent
+    ],
+    exports: [DynamicTableComponent],
+    providers: [
+        CellService,
+        ColumnFilterService
+    ]
 })
 export class DynamicTableModule {
   constructor(private readonly cellService: CellService) {

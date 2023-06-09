@@ -42,11 +42,6 @@ import { AppComponent } from './app.component';
     MatIconModule,
     MatPaginatorModule
   ],
-  entryComponents: [
-    OptionsCellComponent,  
-    TextFilterComponent,
-    DateFilterComponent
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })
