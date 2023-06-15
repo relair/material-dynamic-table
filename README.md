@@ -152,6 +152,7 @@ export class AppComponent {
 | @Input() pageSizeOptions :  number[] | The set of provided page size options to display to the user.               |
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
+| @Input() multiSort : boolean         | Enable multi sort - requires data source that can handle MdtMultiSort       |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
 | @Output() rowClick: EventEmitter<any> | Event emmited when row is clicked, parameter is the object used for displaying the row |
 
@@ -162,6 +163,8 @@ export class AppComponent {
 | setFilter(columnName: string, filter: any) | Sets the filter for the column with provided name                     |
 | getFilters()                               | Returns all set column filters                                        |
 | clearFilters()                             | Removes all applied filters                                           |
+| getSort()                                  | Returns all set column sorts                                          |
+| setSort(sortedBy: { id: string; direction: 'asc' | 'desc'; }[]) | Sets sorts for all columns                       |
 
 
 #### ColumnConfig definition

@@ -1,6 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { TableFilter } from '../../data-source/table-filter';
-import { FilterDescription } from 'material-dynamic-table';
+import { FilterDescription, TableFilter } from 'material-dynamic-table';
 
 export class DateFilter implements TableFilter, FilterDescription {
     fromDate: Date;

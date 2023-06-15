@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
 import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
 import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from '@angular/material/legacy-dialog';
-
 import { DataSource } from '@angular/cdk/table';
+
+import { MdtMultiSort } from './multi-sort/multi-sort.directive';
 import { ColumnConfig } from './column-config.model';
 import { ColumnFilter } from './column-filter.model';
 import { ColumnFilterService } from './table-cell/cell-types/column-filter.service';
@@ -21,13 +21,14 @@ export class DynamicTableComponent implements OnInit {
   @Input() pageSizeOptions = [20, 50, 100];
   @Input() showFilters = true;
   @Input() stickyHeader = false;
+  @Input() multiSort = false;
   @Input() paginator: MatPaginator;
 
   @Output() rowClick = new EventEmitter<any>();
 
   displayedColumns: string[];
 
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MdtMultiSort, { static: true }) sort: MdtMultiSort;
   @ViewChild(MatPaginator, { static: true }) private internalPaginator: MatPaginator;
 
   private appliedFilters: { [key: string]: any; } = {}; 
@@ -146,6 +147,14 @@ export class DynamicTableComponent implements OnInit {
 
     this.appliedFilters[filterColumn.name] = filter;
     this.updateDataSource();
+  }
+
+  getSort() {
+    return this.sort.sortedBy;
+  }
+
+  setSort(sortedBy: { id: string, direction: 'asc' | 'desc' }[]) {
+    this.sort.sortedBy = sortedBy;
   }
 
   private getColumnByName(columnName: string): ColumnConfig | undefined {

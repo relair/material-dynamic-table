@@ -7,6 +7,9 @@ import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/materia
 import { MatIconModule } from '@angular/material/icon';
 import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
+import { MdtMultiSort } from './multi-sort/multi-sort.directive';
+import { MdtMultiSortHeader } from './multi-sort/multi-sort-header';
+import { MdtTableDataSource } from './multi-sort/multi-sort-data-source';
 
 import { DynamicTableComponent } from './dynamic-table.component';
 import { TableCellComponent } from './table-cell/table-cell.component';
@@ -25,27 +28,29 @@ import { TextCellComponent } from './table-cell/cell-types/text-cell.component';
 import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        MatTableModule,
-        MatSortModule,
-        MatPaginatorModule,
-        MatIconModule,
-        MatDialogModule,
-        MatTooltipModule
-    ],
-    declarations: [
-        DynamicTableComponent,
-        TableCellComponent,
-        CellDirective,
-        TextCellComponent,
-        DateCellComponent
-    ],
-    exports: [DynamicTableComponent],
-    providers: [
-        CellService,
-        ColumnFilterService
-    ]
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatDialogModule,
+    MatTooltipModule   
+  ],
+  declarations: [
+    DynamicTableComponent,
+    TableCellComponent,
+    CellDirective,
+    TextCellComponent,
+    DateCellComponent,
+    MdtMultiSort,
+    MdtMultiSortHeader
+  ],
+  exports: [DynamicTableComponent, MdtMultiSort],
+  providers: [
+    CellService,
+    ColumnFilterService
+  ]
 })
 export class DynamicTableModule {
   constructor(private readonly cellService: CellService) {
