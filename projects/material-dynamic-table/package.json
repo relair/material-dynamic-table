@@ -1,13 +1,13 @@
 {
   "name": "material-dynamic-table",
-  "version": "17.5.0",
+  "version": "18.5.0",
   "license": "MIT",
   "author": "Marcin Suty",
   "description": "Dynamic table component for angular built on top of angular material table. It offers sorting, pagination, filtering per column and the ability to specify content types and components used for displaying them.",
   "keywords": [
     "angular",
     "angular2",
-    "angular17",
+    "angular18",
     "ng",
     "ng2",
     "dynamic",
@@ -20,8 +20,8 @@
     "type": "git"
   },
   "peerDependencies": {
-    "@angular/common": ">=17.0.0-0",
-    "@angular/core": ">=17.0.0-0",
-    "@angular/material": ">=17.0.0-0"
+    "@angular/common": ">=18.0.0-0",
+    "@angular/core": ">=18.0.0-0",
+    "@angular/material": ">=18.0.0-0"
   }
 }
