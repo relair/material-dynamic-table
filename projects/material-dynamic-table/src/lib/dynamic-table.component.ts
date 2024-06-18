@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
-import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from '@angular/material/legacy-dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DataSource } from '@angular/cdk/table';
 
 import { MdtMultiSort } from './multi-sort/multi-sort.directive';

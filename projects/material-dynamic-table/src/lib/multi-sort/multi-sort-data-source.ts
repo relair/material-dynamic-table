@@ -1,8 +1,7 @@
 import { DataSource } from '@angular/cdk/collections';
 import { _isNumberValue } from '@angular/cdk/coercion';
-import { MatTableDataSourcePageEvent } from '@angular/material/table';
 import { Sort } from '@angular/material/sort';
-import { MatLegacyPaginator } from '@angular/material/legacy-paginator';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { Observable, BehaviorSubject, Subject, Subscription, of, merge, combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -75,14 +74,14 @@ export class MdtTableDataSource<T> extends DataSource<T> {
   }
   private _multiSort: MdtMultiSort | null;
  
-  get paginator(): MatLegacyPaginator | null {
+  get paginator(): MatPaginator | null {
     return this._paginator;
   }
-  set paginator(paginator: MatLegacyPaginator | null) {
+  set paginator(paginator: MatPaginator | null) {
     this._paginator = paginator;
     this._updateChangeSubscription();
   }
-  private _paginator: MatLegacyPaginator | null;
+  private _paginator: MatPaginator | null;
 
   sortingDataAccessor: (data: T, sortHeaderId: string) => string | number = (
     data: T,
@@ -118,12 +117,12 @@ export class MdtTableDataSource<T> extends DataSource<T> {
     const sortChange: Observable<Sort | null | void> = this._multiSort
       ? (merge(this._multiSort.multiSortChange, this._multiSort.initialized) as Observable<Sort | void>)
       : of(null);
-    const pageChange: Observable<MatTableDataSourcePageEvent | null | void> = this._paginator
+    const pageChange: Observable<PageEvent | null | void> = this._paginator
       ? (merge(
         this._paginator.page,
         this._internalPageChanges,
         this._paginator.initialized,
-      ) as Observable<MatTableDataSourcePageEvent | void>)
+      ) as Observable<PageEvent | void>)
       : of(null);
     const dataStream = this._data;
     // Watch for base data or filter changes to provide a filtered set of data.

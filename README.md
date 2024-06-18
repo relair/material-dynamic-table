@@ -20,7 +20,9 @@ Please follow https://material.angular.io/guide/getting-started
 The supported version of Angular Material will be indicated by the major version number of this library. Version 8.3.0
 is for Angular Material ^8.0.0, version 9.3.0 is for ^9.0.0, while versions <1.3.0 should work for versions <8.0.0.
 
-For Angular Material 15 the library is using legacy material components.
+For Angular Material 15 and 16 the library is using legacy material components.
+
+Version 17 of this library is using new versions of material components for table and paginator.
 
 Filter is using material icon, so adding material icons may be needed as well:
 https://material.angular.io/guide/getting-started#step-6-optional-add-material-icons
