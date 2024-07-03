@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Input, ViewChild, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, Input, ViewChild, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CellDirective } from './cell.directive';
 import { CellService } from './cell-types/cell.service';
 import { CellComponent } from './cell-types/cell.component';
@@ -6,7 +6,8 @@ import { ColumnConfig } from '../column-config.model';
 
 @Component({
     selector: 'mdt-table-cell',
-    template: '<ng-template mdtCellHost></ng-template>'
+    template: '<ng-template mdtCellHost></ng-template>',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableCellComponent implements OnInit {
     @ViewChild(CellDirective, { static: true }) cellHost: CellDirective;
