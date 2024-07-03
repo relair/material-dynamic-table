@@ -76,7 +76,8 @@ export class AppComponent {
     {
       name: 'product',
       displayName: 'Product',
-      type: 'string'
+      type: 'string',
+      hint: 'Product name'
     },
     {
       name: 'description',
@@ -151,10 +152,11 @@ export class AppComponent {
 | @Input() columns: ColumnConfig[]     | Column definition for dynamic table, order will determine column order      |
 | @Input() dataSource: DataSource<any> | Data source that provides data for dynamic table                            |
 | @Input() pageSize: number            | Initial page size for pagination - default 20                               |
-| @Input() pageSizeOptions :  number[] | The set of provided page size options to display to the user.               |
+| @Input() pageSizeOptions : number[]  | The set of provided page size options to display to the user.               |
 | @Input() showFilters: boolean        | If the filters are defined adds the ability to turn them off - default true |
 | @Input() stickyHeader : boolean      | Whether the table should have sticky header                                 |
 | @Input() multiSort : boolean         | Enable multi sort - requires data source that can handle MdtMultiSort       |
+| @Input() hintDelay : number          | Delay before column hint is shown in miliseconds - default 500              |
 | @Input() paginator : MatPaginator    | Paginator to be used instead of internal paginator or null to hide internal |
 | @Output() rowClick: EventEmitter<any> | Event emmited when row is clicked, parameter is the object used for displaying the row |
 
@@ -180,6 +182,7 @@ ColumnConfig is used to provide specification for the columns to be displayed
 | options          | Optional field that can be used to pass extra data for cells                               |
 | sticky           | Optional field that can make column sticky to start or end of table. Values: 'start', 'end'|
 | sort             | Optional field that can disable sort on the column if the value is false                   |
+| hint             | Optional field that specifies column hint to be displayed for column header                |
 
 #### Cell types
 By default there are two types provided:

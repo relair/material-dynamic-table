@@ -22,6 +22,7 @@ export class DynamicTableComponent implements OnInit {
   @Input() showFilters = true;
   @Input() stickyHeader = false;
   @Input() multiSort = false;
+  @Input() hintDelay = 500;
   @Input() paginator: MatPaginator;
 
   @Output() rowClick = new EventEmitter<any>();

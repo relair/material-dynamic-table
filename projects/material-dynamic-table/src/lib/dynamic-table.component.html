@@ -4,7 +4,7 @@
   <ng-container *ngFor="let column of columns; let i = index" matColumnDef="{{ column.name }}"
                 [sticky]="column.sticky === 'start'" [stickyEnd]="column.sticky === 'end'">
     <th mat-header-cell *matHeaderCellDef mdt-sort-header="{{ column.name }}" [disabled]="column.sort === false">
-      {{ column.displayName }}
+      <span [matTooltip]="column.hint" [matTooltipShowDelay]="hintDelay">{{ column.displayName }}</span>
       <button class="mat-sort-header-button" *ngIf="showFilters && canFilter(column)"
               (click)="filter(column); $event.stopPropagation();"
               matTooltip="{{ getFilterDescription(column) }}" matTooltipDisabled="{{ !getFilterDescription(column) }}">
