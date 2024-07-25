@@ -82,7 +82,8 @@ export class AppComponent {
     {
       name: 'description',
       displayName: 'Description',
-      type: 'string'
+      type: 'string',
+      resizable: { minWidth: 130, maxWidth: 200 }
     },
     {
       name: 'recievedOn',
@@ -183,6 +184,7 @@ ColumnConfig is used to provide specification for the columns to be displayed
 | sticky           | Optional field that can make column sticky to start or end of table. Values: 'start', 'end'|
 | sort             | Optional field that can disable sort on the column if the value is false                   |
 | hint             | Optional field that specifies column hint to be displayed for column header                |
+| resizable        | Optional field that enables column to be resizable and allows setting min and max width    |
 
 #### Cell types
 By default there are two types provided:
@@ -284,3 +286,6 @@ To make use of filters you need to have data source that can handle them. See `F
 
 Filters can have a description that is displayed when the filter is applied. To set the description for the filter the filter model should have a method getDescription that returns a string.
 Implement interface 'FilterDescription' for your filter model to have the description displayed.
+
+#### Resizable column
+To enable resizable columns add the css file from node_modules\material-dynamic-table\css\column-resize.css in addition to setting specific columns

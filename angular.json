@@ -24,6 +24,7 @@
             ],
             "styles": [
               "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "dist/material-dynamic-table/css/column-resize.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,0 +1,92 @@
+
+.mat-column-resize-table.cdk-column-resize-with-resized-column {
+  table-layout: fixed;
+}
+
+.mat-column-resize-flex .mat-header-cell, .mat-mdc-header-cell, .mat-cell, .mat-mdc-cell {
+  box-sizing: border-box;
+  min-width: 32px;
+}
+
+.mat-header-cell,
+.mat-mdc-header-cell {
+  position: relative;
+}
+
+.mat-resizable {
+  box-sizing: border-box;
+}
+
+.mat-header-cell:not(.mat-resizable)::after,
+.mat-mdc-header-cell:not(.mat-resizable)::after,
+.mat-resizable-handle {
+  background: transparent;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  transition: background 300ms cubic-bezier(0.55, 0, 0.55, 0.2);
+  width: 1px;
+}
+
+.mat-header-cell:not(.mat-resizable)::after,
+.mat-mdc-header-cell:not(.mat-resizable)::after {
+  content: '';
+}
+
+.mat-header-cell:not(.mat-resizable)::after,
+.mat-mdc-header-cell:not(.mat-resizable)::after,
+.mat-resizable-handle {
+  right: 0;
+}
+
+.mat-header-row.cdk-column-resize-hover-or-active,
+.mat-mdc-header-row.cdk-column-resize-hover-or-active .mat-header-cell,
+.mat-mdc-header-cell {
+  border-right: none;
+}
+
+  .mat-header-row.cdk-column-resize-hover-or-active,
+  .mat-mdc-header-row.cdk-column-resize-hover-or-active .mat-header-cell:not(.mat-resizable)::after,
+  .mat-mdc-header-cell:not(.mat-resizable)::after {
+    background: none;
+  }
+
+.mat-header-row.cdk-column-resize-hover-or-active,
+.mat-mdc-header-row.cdk-column-resize-hover-or-active .mat-resizable-handle {
+  background: rgba(0, 0, 0, .12);
+}
+
+.mat-resizable.cdk-resizable-overlay-thumb-active > .mat-resizable-handle {
+  opacity: 0;
+  transition: none;
+}
+
+.mat-resizable-handle:focus,
+.mat-header-row.cdk-column-resize-hover-or-active .mat-resizable-handle:focus,
+.mat-mdc-header-row.cdk-column-resize-hover-or-active .mat-resizable-handle:focus {
+  background: rgba(0, 0, 0, .12);
+  outline: none;
+}
+
+.mat-column-resize-overlay-thumb {
+  background: transparent;
+  cursor: col-resize;
+  height: 100%;
+  transition: background 300ms cubic-bezier(0.55, 0, 0.55, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  width: 100%;
+}
+
+.mat-column-resize-overlay-thumb:active {
+  background: linear-gradient(90deg, transparent, transparent 7px, rgba(0, 0, 0, .12) 7px, rgba(0, 0, 0, .12) 9px, transparent 9px, transparent);
+  will-change: transform;
+}
+
+.mat-column-resize-overlay-thumb:active .mat-column-resize-overlay-thumb-top {
+  background: linear-gradient(90deg, transparent, transparent 4px, rgba(0, 0, 0, .12) 4px, rgba(0, 0, 0, .12) 12px, transparent 12px, transparent);
+}
+
+.mat-column-resize-overlay-thumb-top {
+  width: 100%;
+}

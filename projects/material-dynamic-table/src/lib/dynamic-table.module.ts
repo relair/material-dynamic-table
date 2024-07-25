@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatColumnResizeModule } from './column-resize/column-resize-module';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -34,7 +36,8 @@ import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
     MatPaginatorModule,
     MatIconModule,
     MatDialogModule,
-    MatTooltipModule   
+    MatTooltipModule,
+    MatColumnResizeModule
   ],
   declarations: [
     DynamicTableComponent,
@@ -45,7 +48,7 @@ import { DateCellComponent } from './table-cell/cell-types/date-cell.component';
     MdtMultiSort,
     MdtMultiSortHeader
   ],
-  exports: [DynamicTableComponent, MdtMultiSort],
+  exports: [DynamicTableComponent, MdtMultiSort, MatColumnResizeModule],
   providers: [
     CellService,
     ColumnFilterService

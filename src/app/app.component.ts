@@ -31,18 +31,21 @@ export class AppComponent {
       displayName: 'Description',
       type: 'string',
       sort: false,
-      hint: 'Product Description'
+      hint: 'Product Description',
+      resizable: { minWidth: 120 }
     },
     {
       name: 'category',
       displayName: 'Category',
       type: 'string',
+      resizable: { maxWidth: 200 }
     },
     {
       name: 'recievedOn',
       displayName: 'Recieved On',
       type: 'date',
-      hint: 'Date product was received on'
+      hint: 'Date product was received on',
+      resizable: { minWidth: 130, maxWidth: 200 }
     },
     {
       name: 'created',
@@ -51,7 +54,8 @@ export class AppComponent {
       options: {
         dateFormat: 'shortDate'
       },
-      hint: 'Date entry was created'
+      hint: 'Date entry was created',
+      resizable: true
     },
     {
       name: '',
