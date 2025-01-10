@@ -6,6 +6,10 @@ th .mat-icon.mat-default {
     opacity: 0.54;
 }
 
+th button:focus .mat-icon.mat-default {
+    opacity: 0.8;
+}
+
 th .mat-icon.mat-default:hover {
     opacity: 1;
 }

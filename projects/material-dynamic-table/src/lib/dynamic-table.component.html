@@ -6,7 +6,7 @@
     <th mat-header-cell *matHeaderCellDef mdt-sort-header="{{ column.name }}" [disabled]="column.sort === false" [resizable]="column.resizable">
       <span [matTooltip]="column.hint" [matTooltipShowDelay]="hintDelay">{{ column.displayName }}</span>
       <button type="button" [attr.aria-label]="'Filter by ' + column.displayName" class="mat-sort-header-button" *ngIf="showFilters && canFilter(column)"
-              (click)="filter(column); $event.stopPropagation();"
+              (click)="onFilterClick($event, column)" (keydown.enter)="onFilterClick($event, column)" (keydown.space)="onFilterClick($event, column)"
               matTooltip="{{ getFilterDescription(column) }}" matTooltipDisabled="{{ !getFilterDescription(column) }}">
         <mat-icon color="{{ isFiltered(column) ? 'primary' : 'default' }}">filter_list</mat-icon>
       </button>

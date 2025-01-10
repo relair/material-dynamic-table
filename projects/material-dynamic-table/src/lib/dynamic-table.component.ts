@@ -32,7 +32,9 @@ export class DynamicTableComponent implements OnInit {
   @ViewChild(MdtMultiSort, { static: true }) sort: MdtMultiSort;
   @ViewChild(MatPaginator, { static: true }) private internalPaginator: MatPaginator;
 
-  private appliedFilters: { [key: string]: any; } = {}; 
+  private appliedFilters: { [key: string]: any; } = {};
+
+  isDialogOpen = false;
 
   constructor(private readonly columnFilterService: ColumnFilterService, private readonly dialog: MatDialog) { }
 
@@ -83,7 +85,16 @@ export class DynamicTableComponent implements OnInit {
     return name || 'col' + columnNumber;
   }
 
+  onFilterClick(event: Event, column: ColumnConfig): void {
+    this.filter(column);
+    event.stopPropagation();
+  }
+
   filter(column: ColumnConfig) {
+    if (this.isDialogOpen) {
+      return;
+    }
+
     const filter = this.columnFilterService.getFilter(column.type);
 
     if (filter) {
@@ -98,6 +109,7 @@ export class DynamicTableComponent implements OnInit {
       dialogConfig.data = columnFilter;
 
       const dialogRef = this.dialog.open(filter, dialogConfig);
+      this.isDialogOpen = true;
 
       dialogRef.afterClosed().subscribe(result => {
         if (result) {
@@ -109,6 +121,8 @@ export class DynamicTableComponent implements OnInit {
         if (result || result === '') {
           this.updateDataSource();
         }
+
+        this.isDialogOpen = false;
       });
     }
   }
